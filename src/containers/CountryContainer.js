@@ -55,7 +55,11 @@ const CountryContainer = () => {
 
     return (
         <>
-
+            {/*
+            Included 'countriesVisited' prop in both lists:
+              - Prevents duplicate rendering
+              - Enables button functionality for adding countries 
+            */}
             <CountryList
                 // Display all the countries in the Array
                 countries={countriesToVisit}
@@ -63,11 +67,13 @@ const CountryContainer = () => {
                 // a country to the 'Countries Visited' List
                 handleAddToVisited={handleAddToVisited}
                 title="🤞 Countries To Visit 🤞"
+                countriesVisited={countriesVisited}
             />
             <CountryList
                 // Display all the visited countries
                 countries={countriesVisited}
                 title="🎉 Countries Visited! 🎉"
+                countriesVisited={countriesVisited}
             />
         </>
     )

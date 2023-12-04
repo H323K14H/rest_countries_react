@@ -6,7 +6,8 @@ import Country from './Country'
     handleAddToVisited props PASSED DOWN FROM 
     CountryContainer 
 */
-const CountryList = ({ countries, title, handleAddToVisited }) => {
+const CountryList = ({ countries, title, handleAddToVisited, countriesVisited }) => {
+    console.log('countriesVisited:', countriesVisited);
 
     /* 
         - loop through countriesToVisit and return an
@@ -18,6 +19,7 @@ const CountryList = ({ countries, title, handleAddToVisited }) => {
             country={country}
             key={id}
             handleAddToVisited={handleAddToVisited}
+            countriesVisited={countriesVisited}
         />
     })
 
