@@ -1,10 +1,14 @@
 import React from 'react'
 
-const Country = () => {
+
+// Deconstructing country prop 
+// PASSED DOWN FROM CountryList
+const Country = ({ country }) => {
     return (
         <>
-            <div>Country!</div>
-            <button></button>
+            <p>{country.name.common}</p>
+            <p>{country.flag}</p>
+            <button>Add To Visited!</button>
         </>
     )
 }
